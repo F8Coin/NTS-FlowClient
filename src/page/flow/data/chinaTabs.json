@@ -1,0 +1,57 @@
+{
+  "china":{
+    "title":"流量套餐类型",
+    "eastChina":[
+      {"provinces":"卫星-基础套餐","satelliteFlow":"卫星流量套餐。流量使用期限：一年。账户可用流量低于0KB时，设备停用。","satelliteCost":"18元/KB" ,"activeText":"暂无" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费。"}
+    ],
+    "southChina":[
+      {"provinces":"流量套餐2","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐2","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐2","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐2","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐2","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ],
+    "centralChina":[
+      {"provinces":"流量套餐3","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐3","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐3","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐3","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐3","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ],
+    "northChina":[
+      {"provinces":"流量套餐4","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐4","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐4","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐4","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐4","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ],
+    "northwestChina":[
+      {"provinces":"流量套餐5","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐5","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐5","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐5","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐5","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ],
+    "southwestChina":[
+      {"provinces":"流量套餐6","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐6","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐6","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐6","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐6","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ],
+    "northeastChina":[
+      {"provinces":"流量套餐7","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐7","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐7","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐7","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐7","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ],
+    "specialareaChina":[
+      {"provinces":"流量套餐8","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国移动","remarks":"适用企业商用"},
+      {"provinces":"流量套餐8","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国电信","remarks":"适用企业商用"},
+      {"provinces":"流量套餐8","satelliteFlow":"物联网卡4G流量,30M/年,流量使用期限一年有效 账号可用流量低于10KB时进入锁定状态","satelliteCost":"7 元/年" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"中国联通","remarks":"适用企业商用"},
+      {"provinces":"流量套餐8","satelliteFlow":"卫星流量套餐-独享版标准价,入网费: 450元/台.次, 月租费:200元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,每个终端独立核算费用,套餐内流量当月未使用完,次月作废,各终端套餐内的流量不能互相共用"},
+      {"provinces":"流量套餐8","satelliteFlow":"卫星流量套餐-共享版标准价,入网费: 450元/台.次, 月租费:230元/月.台,含13500 B 卫星流量,超出部分9元/1000 B","satelliteCost":"无" ,"activeText":"账号累计注册激活时间大于2年,充值优惠9折" ,"operatorType":"新时空","remarks":"卫星网络开通后申请暂停,再次申请开通时,需要再次支付450元/台的入网费,根据套餐名下所有设备消耗的总卫星流量来核算费用,超出总流量包的部分,按照9元/1000 bytes计算,总流量包 = 13500bytes * 设备数量"}
+    ]
+  }
+}
