@@ -58,7 +58,7 @@ const urls = {
     },
 
     // 用户信息
-    userInfoApi: {
+    userInfoDataApi: {
         url: '/api/user/getUserInfo'
     },
 

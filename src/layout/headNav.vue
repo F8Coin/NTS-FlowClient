@@ -28,7 +28,7 @@
                             <template slot="title">
                                 <div class='welcome'>
                                     <span class="name">{{$t('commons.hi')}},</span>
-                                    <span class='name avatarname'>NTS</span>
+                                    <span class='name avatarname' v-text="accountName"></span>
                                     <!-- <span class='name avatarname'> {{ $t(`commons.${name}`)}}</span> -->
                                 </div>
                                 <img :src="avatar" class='avatar' alt="">
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+    import {api} from '@/config/api'
     import { mapGetters } from "vuex";
     import * as mUtils from '@/utils/mUtils'
     import { setToken,getToken } from '@/utils/auth'
@@ -65,7 +66,8 @@
                 americaImg:americaImg,
                 menu:{
                     userBgcolor:'#f0f2f5'
-                }
+                },
+                accountName: 'NTS'
             }
           },
           components:{
@@ -79,11 +81,12 @@
               
           },
           created(){
-            
+            this.accountName= getToken('accountName');
           },
           mounted(){
           },
           methods:{
+
               logout(){
                     this.$store.dispatch('LogOut').then(() => {
                         location.reload();

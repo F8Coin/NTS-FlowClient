@@ -363,7 +363,7 @@
                         this.tableData= this.filterResData(res.data.rows);
                     }else if(res.data.rows.length == 0){
                         this.loading = false;
-                        this.showMessage('error','暂无数据');
+                        // this.showMessage('waring','暂无数据');
                     } else {
                         this.loading = false;
                         this.showMessage('error',res.data.msg);

@@ -57,8 +57,8 @@
                 });
 			},
 
-			async login(userInfo) {
-				let res = await api.login(userInfo);
+			async login(accountData) {
+				let res = await api.login(accountData);
 
 				if(res.data.code == 0) {
 					// this.showMessage('success', '登录成功');
@@ -67,6 +67,7 @@
 					let userInfo= JSON.stringify(res.data.data);
 					localStorage.setItem('userInfo',userInfo);
 
+					setToken('accountName',accountData.username)
 					setToken("Token","admin"); // permission.js根据token拉取用户信息
 					setToken("X-NTS-Token",res.data.data.token);
 					this.$router.push({ path: '/home/index' });
@@ -79,8 +80,7 @@
 		    submitForm(loginForm) {
 				this.$refs[loginForm].validate((valid) => {                
 					if (valid) {
-						let userInfo = this.loginForm;
-						this.login(userInfo);
+						this.login(this.loginForm);
 					}
 				});
         	}

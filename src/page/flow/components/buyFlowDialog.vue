@@ -22,7 +22,7 @@
                     <el-input type="text" v-model.number="form.modelSn" placeholder="请输入卫星SN或ICCID卡号"></el-input>
                 </el-form-item> -->
 
-                <el-form-item prop='flowPlansId' label="选择套餐:">    
+                <!-- <el-form-item prop='flowPlansId' label="选择套餐:">    
 					<el-select v-model="form.flowPlansId" placeholder="请选择流量套餐类型" class="flowPackage" @change="selectflowPlansId(form.flowPlansId)">
 						<el-option
 							v-for="item in flowPackage"
@@ -32,7 +32,7 @@
 							:disabled="item.disabled">
 						</el-option>
 					</el-select>
-                </el-form-item>
+                </el-form-item>  -->
 
                 <el-form-item prop='flowAmount' label="购买数量:">
                     <el-input type="text" v-model.number="form.flowAmount" placeholder="请输入购买的流量数量 (单位 KB)"></el-input>
@@ -206,7 +206,8 @@
                     if (valid) {//表单数据验证完成之后，提交数据;
 						this.companyFlowOrder({
 							flowNumber: this[form].flowAmount,
-							flowPlansId: this[form].flowPlansId,
+							flowPlansId: 1,
+							// flowPlansId: this[form].flowPlansId,
 							// mainAccount: formData.mainAccount,
 							// remarks: formData.remarks
 						})

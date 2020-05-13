@@ -122,8 +122,8 @@ const api = {}
     }
 
     // 用户信息
-    api.userInfo = params => {
-        return fetch(urls.userInfoApi, params, 'get')
+    api.userInfoData = params => {
+        return fetch(urls.userInfoDataApi, params, 'get')
     }
 
     // 添加企业用户

@@ -27,6 +27,13 @@ if(process.env.NODE_ENV === "development" ){
 
 Vue.config.productionTip = false;
 
+Vue.prototype.showMessage = function(type,message){
+  this.$message({
+      type: type,
+      message: message
+  });
+}
+
 
 
 new Vue({

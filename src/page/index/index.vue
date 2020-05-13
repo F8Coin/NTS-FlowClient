@@ -4,11 +4,21 @@
 			<el-row :gutter="10" class="row_list">
 				<el-col :span="8">
 					<div class="row_left row_base">
-						<el-col :span="12">
+						<!-- <el-col :span="12">
 							<div class="pay part1_color data_list rflex">
 								<div class="leftItem cflex wflex">
 									<p class="investor">{{ $t('index.home_Iot') }}</p>
-									<p class="number"><span class="amount"> {{ homeData.IotFlow }} </span> <span class="perTitle">({{ $t('index.flow_unit') }})</span></p>
+									<p class="number"><span class="amount"> {{ homeData.usedFlow4G }} </span> <span class="perTitle">({{ $t('index.flow_unit') }})</span></p>
+								</div>
+								<div class="rightItem">
+								</div>
+							</div>
+						</el-col> -->
+						<el-col :span="12">
+							<div class="pay part1_color data_list rflex">
+								<div class="leftItem cflex wflex">
+									<p class="investor">{{ $t('index.home_satellite') }}</p>
+									<p class="number"><span class="amount"> {{ homeData.usedFlowSat }} </span> <span class="perTitle">({{ $t('index.flow_unit') }})</span></p>
 								</div>
 								<div class="rightItem">
 									<!-- <i class="fa fa-life-ring" aria-hidden="true"></i> -->
@@ -18,15 +28,8 @@
 						<el-col :span="12">
 							<div class="pay part2_color data_list rflex">
 								<div class="leftItem cflex wflex">
-									<p class="investor">
-										{{ $t('index.home_satellite') }}
-										<span class="investor" style="margin-left:48px">可用卫星流量</span>				
-									</p>
-									<div class="number">{{ homeData.satelliteFlow }} <span class="perTitle">( {{ $t('index.flow_unit') }} )</span>
-										<span style="margin-left:60px" class="number"><span class="amount"> {{ homeData.IotFlow }} </span> <span class="perTitle">({{ $t('index.flow_unit') }})</span></span>
-									</div>
-									
-									
+									<p class="investor">可用卫星流量</p>
+									<p class="number"><span class="amount"> {{ homeData.surplusFlowSat }} </span> <span class="perTitle">({{ $t('index.flow_unit') }})</span></p>
 								</div>
 								<div class="rightItem">
 									
@@ -42,7 +45,7 @@
 							<div class="pay part3_color data_list rflex">
 								<div class="leftItem cflex wflex">
 									<p class="investor">{{ $t('index.home_mOrder') }}</p>
-									<p class="number">{{ homeData.mOrder }} <span class="perTitle">( {{ $t('index.order_unit') }} )</span></p>
+									<p class="number">{{ homeData.monthOrder }} <span class="perTitle">( {{ $t('index.order_unit') }} )</span></p>
 								</div>
 								<div class="rightItem">
 									
@@ -53,7 +56,7 @@
 							<div class="pay part4_color data_list rflex">
 								<div class="leftItem cflex wflex">
 									<p class="investor">{{ $t('index.home_yOrder') }}</p>
-									<p class="number">{{ homeData.yOrder }} <span class="perTitle">( {{ $t('index.order_unit') }} )</span></p>
+									<p class="number">{{ homeData.yearOrder }} <span class="perTitle">( {{ $t('index.order_unit') }} )</span></p>
 								</div>
 								<div class="rightItem">
 									
@@ -123,18 +126,22 @@
 	import pieChart from 'cps/echarts/pieChart'; // 承运商用户数量占比
 	import radarChart from 'cps/echarts/radarChart'; // 设备管理概况分布
 	import lineChart from 'cps/echarts/lineChart'; // 最近7天流量购买订单数统计
-import { getToken } from '@/utils/auth';
+	import { getToken } from '@/utils/auth';
 
     export default {
     	data(){
     		return {
 				homeData: {
-					IotFlow: 0,
-					satelliteFlow: 0,
-					mOrder: 0,
-					yOrder: 0,
-					activateSat: 0,
-					activate4G: 0,
+					activate4G: "0",
+					activateSat: "0",
+					allDevice4G: "0",
+					allDeviceSat: "0",
+					monthOrder: "0",
+					surplusFlow4G: "0.0",
+					surplusFlowSat: "0.0",
+					usedFlow4G: "0.0",
+					usedFlowSat: "0.0",
+					yearOrder: "0"
 				}
     		}
     	},
@@ -146,7 +153,7 @@ import { getToken } from '@/utils/auth';
 		   lineChart
 		},	
 		created(){
-			// this.getUserInfo();
+			
 		},
     	mounted(){
 			this.getHomeData();
@@ -171,10 +178,11 @@ import { getToken } from '@/utils/auth';
 					// let cardFlow= objData.cardDataUsage ? (Number(objData.cardDataUsage)/1024).toFixed(2) : "0.0";
 
 					this.homeData={
-						IotFlow: res.data.data.usedFlow4G ? res.data.data.usedFlow4G : '0.0' ,
-						satelliteFlow: res.data.data.usedFlowSat ? res.data.data.usedFlowSat : '0.0' ,
-						mOrder: res.data.data.monthOrder ? res.data.data.monthOrder : '0',
-						yOrder: res.data.data.yearOrder ? res.data.data.yearOrder : '0',
+						usedFlow4G: res.data.data.usedFlow4G ? res.data.data.usedFlow4G : '0.0' ,
+						usedFlowSat: res.data.data.usedFlowSat ? res.data.data.usedFlowSat : '0.0' ,
+						surplusFlowSat: res.data.data.surplusFlowSat ? res.data.data.surplusFlowSat : '0.0' ,
+						monthOrder: res.data.data.monthOrder ? res.data.data.monthOrder : '0',
+						yearOrder: res.data.data.yearOrder ? res.data.data.yearOrder : '0',
 						activateSat: res.data.data.activateSat ? res.data.data.activateSat : '0',
 						activate4G: res.data.data.activate4G ? res.data.data.activate4G : '0'
 					}
@@ -182,11 +190,6 @@ import { getToken } from '@/utils/auth';
 					this.showMessage('error',res.data.msg);
 				}
 			},
-
-			// 用户信息
-			async getUserInfo() {
-				let res = api.userInfo();
-			}
 
     	}
     }
