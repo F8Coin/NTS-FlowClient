@@ -46,16 +46,14 @@
             </el-table-column>
             <el-table-column
                 prop="satActiveStatus"
-                label="卫星模块激活状态"
+                label="卫星模块状态"
                 align='center'
-                width="100"
                 >
             </el-table-column>
             <el-table-column
                 prop="cardActiveStatus"
-                label="ICCID卡激活状态"
+                label="ICCID卡状态"
                 align='center'
-                width="100"
                 >
             </el-table-column>
             <el-table-column

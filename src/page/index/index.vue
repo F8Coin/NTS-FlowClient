@@ -153,25 +153,16 @@
 		   lineChart
 		},	
 		created(){
-			
+			this.getUserData();
 		},
     	mounted(){
 			this.getHomeData();
 		},
     	methods: {
-			showMessage(type,message){
-                this.$message({  // Element ui自带信息弹窗
-                    type: type,
-                    message: message
-                });
-			},
-
-			// 首页- 获取流量信息,流量订单数,设备数量
 			async getHomeData() {
 				let res = await api.homeData();
 				if(res.data.code == 0) {
 					// this.showMessage('success',res.data.msg);
-
 					// let dataBothData= objData.dataBoth ? objData.dataBoth : "0.0" ;
 					// let orbcommBytesData= objData.orbcommBytes ? objData.orbcommBytes : "0.0"; 
 					// let satSumData= ((Number(dataBothData) + Number(orbcommBytesData))/1024).toFixed(2);
@@ -179,8 +170,8 @@
 
 					this.homeData={
 						usedFlow4G: res.data.data.usedFlow4G ? res.data.data.usedFlow4G : '0.0' ,
-						usedFlowSat: res.data.data.usedFlowSat ? res.data.data.usedFlowSat : '0.0' ,
-						surplusFlowSat: res.data.data.surplusFlowSat ? res.data.data.surplusFlowSat : '0.0' ,
+						usedFlowSat: res.data.data.usedFlowSat ? (Number(res.data.data.usedFlowSat)/1024).toFixed(2) : "0.0",
+						surplusFlowSat: res.data.data.surplusFlowSat ? (Number(res.data.data.surplusFlowSat)/1024).toFixed(2) : "0.0",
 						monthOrder: res.data.data.monthOrder ? res.data.data.monthOrder : '0',
 						yearOrder: res.data.data.yearOrder ? res.data.data.yearOrder : '0',
 						activateSat: res.data.data.activateSat ? res.data.data.activateSat : '0',
@@ -190,7 +181,10 @@
 					this.showMessage('error',res.data.msg);
 				}
 			},
-
+			async getUserData() {
+				let res = await api.userInfoData()
+				console.log(res);
+			}
     	}
     }
 </script>

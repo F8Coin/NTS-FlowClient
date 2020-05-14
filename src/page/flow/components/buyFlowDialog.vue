@@ -50,7 +50,7 @@
             </el-form>
         </div>
 		<div class="payContainer" v-else>
-            <div class="title" style="font-size:18px;text-align:center;padding-bottom:12px">扫一扫付款 xxx (元)</div>
+            <div class="title" style="font-size:18px;text-align:center;padding-bottom:12px">扫一扫付款 {{payAccount}} (元)</div>
 			<div id="qrCode" ref="qrCodeDiv" style="width:200px; height: 220px;margin:0 auto;"></div>
 			<div class="paymerchantInfo">
 				<img :src="paySrc" alt="" class="payIcon">
@@ -92,7 +92,8 @@
 			isVisible: this.isShow,
 			isForm: true,
 			payUrl: '',
-			paySrc: payImg,
+            paySrc: payImg,
+            payAccount: 0,
             form:{
                 mainAccount: '',
 				remarks: '',
@@ -177,7 +178,6 @@
 					this.layerTitle= '流量购买支付';
 					this.$nextTick(()=>{
 			  			document.getElementById("qrCode").innerHTML = " ";
-
                         this.urlCodePay(this.payUrl)
                     })
                     
@@ -189,6 +189,7 @@
 			async companyFlowOrder(params) {
 				let res = await api.buyCompanyFlow(params)
 				if(res.data.code == 0) {
+                    this.payAccount = res.data.data.actualPrice
 					this.weChatPay({
 						orderCode:res.data.data.orderCode
                     });
