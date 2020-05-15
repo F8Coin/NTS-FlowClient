@@ -50,28 +50,15 @@
 			}
 		},
 		methods: {
-			showMessage(type,message){
-                this.$message({  // Element ui自带信息弹窗
-                    type: type,
-                    message: message
-                });
-			},
-
-			async login(accountData) {
-				let res = await api.login(accountData);
-
+			async login(objData) {
+				let res = await api.login(objData);
 				if(res.data.code == 0) {
-					// this.showMessage('success', '登录成功');
-
-					// 存入用户信息
-					let userInfo= JSON.stringify(res.data.data);
-					localStorage.setItem('userInfo',userInfo);
-
-					setToken('accountName',accountData.username)
+					localStorage.setItem('userInfo',JSON.stringify(res.data.data));
+					setToken('accountName',objData.username)
 					setToken("Token","admin"); // permission.js根据token拉取用户信息
 					setToken("X-NTS-Token",res.data.data.token);
 					this.$router.push({ path: '/home/index' });
-					this.$store.dispatch('initLeftMenu'); // 初始化左侧菜单,设置左边菜单始终为展开状态
+					this.$store.dispatch('initLeftMenu'); // 设置左边菜单始终为展开状态
 				}else {
 					this.showMessage('error',res.data.msg);
 				}
@@ -84,7 +71,6 @@
 					}
 				});
         	}
-
 		}
 	}
 </script>
@@ -95,8 +81,6 @@
 		width: 100%;
 		height: 100%;
 		background: url(../assets/img/bg9.png) no-repeat center center;
-		// background: url(../assets/img/bg9.png) no-repeat center center;
-		// background: url(../assets/img/bg91.jpg) no-repeat center center;
 		background-size: 100% 100%;
 	}
 	.form_contianer{
@@ -188,8 +172,6 @@
 		.el-button--primary{
 			background-color:#194aba;
 			border:1px solid #194aba;
-			// background-color:#FF7C1A;
-			// border:1px solid #FF7C1A;
 		}
 	}
 	.sanFangArea{

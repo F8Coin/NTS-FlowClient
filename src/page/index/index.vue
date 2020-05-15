@@ -122,10 +122,10 @@
 	import * as filter from '@/utils/filter'
 	import echarts from 'echarts';
 	import logList from "./components/logList";
-	import barChart from 'cps/echarts/barChart'; // 最近1年流量消耗统计柱形图
-	import pieChart from 'cps/echarts/pieChart'; // 承运商用户数量占比
-	import radarChart from 'cps/echarts/radarChart'; // 设备管理概况分布
-	import lineChart from 'cps/echarts/lineChart'; // 最近7天流量购买订单数统计
+	import barChart from 'cps/echarts/barChart'; 
+	import pieChart from 'cps/echarts/pieChart';
+	import radarChart from 'cps/echarts/radarChart';
+	import lineChart from 'cps/echarts/lineChart';
 	import { getToken } from '@/utils/auth';
 
     export default {
@@ -154,9 +154,10 @@
 		},	
 		created(){
 			this.getUserData();
+			this.getHomeData();
 		},
     	mounted(){
-			this.getHomeData();
+			
 		},
     	methods: {
 			async getHomeData() {

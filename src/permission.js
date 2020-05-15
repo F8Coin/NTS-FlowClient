@@ -8,8 +8,8 @@ import { getToken } from '@/utils/auth' // 验权(从cookie中获取)
 import { getUserInfo } from "@/api/user";
 import { setTitle } from '@/utils/mUtils' // 设置浏览器头部标题
 
-// permission judge function  权限判断方法
-function hasPermission(roles, permissionRoles) {
+//  权限判断方法
+function hasPermission(roles, permissionRoles) { // roles is arrData
   if (roles.indexOf('admin') >= 0) return true // admin permission passed directly
   if (!permissionRoles) return true
   return roles.some(role => permissionRoles.indexOf(role) >= 0)

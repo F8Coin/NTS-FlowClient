@@ -19,12 +19,6 @@ if(process.env.NODE_ENV === "development" ){
   // import('element-ui/lib/theme-chalk/index.css')
 }
 
-
-// 分享功能集合
-// import { shareConfig } from './utils/share';
-// Vue.prototype.shareConfig = shareConfig;
-
-
 Vue.config.productionTip = false;
 
 Vue.prototype.showMessage = function(type,message){

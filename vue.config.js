@@ -54,7 +54,6 @@ module.exports = {
     open: true,
     host: '0.0.0.0',
     port: 8808,
-    // 由于本项目数据通过easy-mock和mockjs模拟，不存在跨域问题，无需配置代理;
     // proxy: { 
     //   '/v2': {  // 这里用'/v2' 代替target 里面的地址,组件中调用接口时直接用'/v2'代替,比如我要调用'https://xxx.com/news' 直接写成'/v2/news'即可
     //       target: target,      // 1. target是你要代理的域名，必须要加上http。如: 'https://stg-pteppp.leanapp.cn'
